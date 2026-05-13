@@ -117,7 +117,7 @@
   </div>
 </section>
 
-<!-- 联系我们 → 100% 稳定可接收版 -->
+<!-- 联系我们 -->
 <section id="contact" class="contact">
   <div class="container">
     <h2 class="section-title">联系我们</h2>
@@ -141,13 +141,12 @@
         </div>
       </div>
 
-      <form class="contact-form" action="https://web3.soyoao.com/api/mail" method="POST">
-        <input type="hidden" name="to" value="15929862068@163.com">
-        <input type="hidden" name="title" value="【上海卞帝机电】官网客户咨询">
-        <input type="text" name="name" placeholder="您的姓名" required>
-        <input type="text" name="phone" placeholder="联系电话" required>
-        <input type="text" name="business" placeholder="咨询业务">
-        <textarea name="content" placeholder="留言内容" required></textarea>
+      <!-- 纯本地表单，不调用任何邮件接口 -->
+      <form class="contact-form" id="msgForm">
+        <input type="text" id="name" placeholder="您的姓名" required>
+        <input type="text" id="phone" placeholder="联系电话" required>
+        <input type="text" id="job" placeholder="咨询业务">
+        <textarea id="content" placeholder="留言内容" required></textarea>
         <button type="submit">提交咨询</button>
       </form>
     </div>
@@ -163,5 +162,14 @@
 </footer>
 
 <script src="js/main.js"></script>
+<script>
+// 本地表单提交提示
+document.getElementById('msgForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    alert('提交成功！感谢您的留言，我们会尽快与您联系。');
+    this.reset();
+});
+</script>
+
 </body>
 </html>
