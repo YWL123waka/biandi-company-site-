@@ -117,7 +117,7 @@
   </div>
 </section>
 
-<!-- 联系我们（已绑定163邮箱） -->
+<!-- 联系我们 免授权版本 -->
 <section id="contact" class="contact">
   <div class="container">
     <h2 class="section-title">联系我们</h2>
@@ -141,8 +141,9 @@
         </div>
       </div>
 
-      <form class="contact-form" action="https://formsubmit.co/15929862068@163.com" method="POST">
-        <input type="hidden" name="_captcha" value="false">
+      <!-- 免授权表单，提交直接跳转提示页，无需邮箱确认 -->
+      <form class="contact-form" action="https://submitform.ai/api/send/15929862068@163.com" method="POST">
+        <input type="hidden" name="_subject" value="网站新客户咨询留言">
         <input type="text" name="姓名" placeholder="您的姓名" required>
         <input type="text" name="电话" placeholder="联系电话" required>
         <input type="text" name="咨询业务" placeholder="咨询业务">
