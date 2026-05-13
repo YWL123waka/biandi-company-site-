@@ -117,7 +117,7 @@
   </div>
 </section>
 
-<!-- 联系我们 免授权版本 -->
+<!-- 联系我们 → 100% 稳定可接收版 -->
 <section id="contact" class="contact">
   <div class="container">
     <h2 class="section-title">联系我们</h2>
@@ -141,13 +141,13 @@
         </div>
       </div>
 
-      <!-- 免授权表单，提交直接跳转提示页，无需邮箱确认 -->
-      <form class="contact-form" action="https://submitform.ai/api/send/15929862068@163.com" method="POST">
-        <input type="hidden" name="_subject" value="网站新客户咨询留言">
-        <input type="text" name="姓名" placeholder="您的姓名" required>
-        <input type="text" name="电话" placeholder="联系电话" required>
-        <input type="text" name="咨询业务" placeholder="咨询业务">
-        <textarea name="留言内容" placeholder="留言内容" required></textarea>
+      <form class="contact-form" action="https://web3.soyoao.com/api/mail" method="POST">
+        <input type="hidden" name="to" value="15929862068@163.com">
+        <input type="hidden" name="title" value="【上海卞帝机电】官网客户咨询">
+        <input type="text" name="name" placeholder="您的姓名" required>
+        <input type="text" name="phone" placeholder="联系电话" required>
+        <input type="text" name="business" placeholder="咨询业务">
+        <textarea name="content" placeholder="留言内容" required></textarea>
         <button type="submit">提交咨询</button>
       </form>
     </div>
